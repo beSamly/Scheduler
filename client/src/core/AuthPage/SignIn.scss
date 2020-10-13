@@ -1,0 +1,113 @@
+#root .signin-container {
+    width: 30vw;
+    transition: 0.5s all ease-in-out;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    padding: 2vw;
+    padding-left: 4vw;
+    padding-right: 4vw;
+
+    .signin-header {
+        height: 34%;
+        text-align: center;
+        // padding-bottom: 2vw;
+        padding-top: 3vw;
+        margin-bottom: 3vw;
+
+        .signin-label-main {
+            font-size: 2vw;
+            font-weight: 700;
+        }
+    }
+
+    .form-cont {
+        padding-top: 0.5vw;
+
+        .each-form {
+            position: relative;
+            // padding: 1vw;
+
+            label {
+                // z-index: -1;
+                position: absolute;
+                top: 17%;
+                left: 0;
+                transition: 0.3s all ease-in-out;
+            }
+
+            input {
+                width: 90%;
+                margin-bottom: 1vw;
+                margin-top: 1vw;
+                margin-right: 3vw;
+                outline: none;
+                border: 0px;
+                padding: 0.6vw;
+                color: black;
+                font-size: inherit;
+                border-bottom: 0.1vw solid rgb(235, 28, 13);
+
+                &:focus {
+                    border-bottom: 0.15vw solid rgb(190, 13, 0);
+                }
+            }
+        }
+
+        .user-icon {
+            width: 30%;
+            height: 30%;
+        }
+    }
+
+    .signin-button-container {
+        padding-bottom: 2vw;
+        text-align: center;
+        font-size: 1.4vw;
+
+        .signin-button {
+            // Making Button Like Credential Boxes
+            width: 100%;
+            padding-top: 1.5vh;
+            padding-bottom: 1.5vh;
+            font-size: 1.4vw;
+            background-color: orange;
+
+            // Keep Below Credentials
+            margin-top: 1.7vw;
+
+            color: rgb(255, 255, 255);
+            border: none;
+            background: #fda428;
+
+            transition: all 0.2s ease-in-out;
+        }
+        .signin-button:hover {
+            color: rgb(255, 255, 255);
+            box-shadow: 0 2px 4px 0 rgba(173, 170, 165, 0.61), 0 6px 20px 0 rgba(187, 186, 184, 0.507);
+        }
+
+        .sign-up-link {
+            font-size: 1.3vw;
+            color: rgb(214, 176, 176);
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+
+    input:focus + label {
+        transform: scale(0.7, 0.7) translate(0%, -80%);
+    }
+
+    .label-active {
+        transform: scale(0.7, 0.7) translate(0%, -80%);
+    }
+}
+
+#root .sign-in-slide-down {
+    transform: translateY(0%);
+}
+
+#root .sign-in-slide-up {
+    transform: translateY(-150%);
+    // display:none;
+}
